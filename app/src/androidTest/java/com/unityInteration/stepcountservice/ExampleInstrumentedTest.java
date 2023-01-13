@@ -1,4 +1,4 @@
-package com.example.stepcountservice;
+package com.unityInteration.stepcountservice;
 
 import android.content.Context;
 
