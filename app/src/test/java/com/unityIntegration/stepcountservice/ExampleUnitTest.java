@@ -1,4 +1,4 @@
-package com.unityInteration.stepcountservice;
+package com.unityIntegration.stepcountservice;
 
 import org.junit.Test;
 
