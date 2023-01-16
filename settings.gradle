@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "StepCountService"
-include ':app'
+include ':StepCounterTMG'
