@@ -93,8 +93,20 @@ public final class Bridge extends Application {
 
     private static void start(){
         myActivity.startForegroundService(new Intent(myActivity, StepCounterService.class));
-
     }
+
+    public static boolean CheckForPermissions()
+    {
+        if (myActivity != null) {
+            final SharedPreferences sharedPreferences = myActivity.getSharedPreferences("service_settings", MODE_PRIVATE);
+            if (!sharedPreferences.getBoolean("auto_start", false)) {
+                return false;
+            }
+            return true;
+        }
+        return true;
+    }
+
     public static void StopService(){
         Intent serviceIntent = new Intent(myActivity, StepCounterService.class);
         myActivity.stopService(serviceIntent);
